@@ -1,0 +1,24 @@
+<div class="container">
+
+            <h1  class="text-center p-3 mb-2 bg-primary text-white">Apply for Job</h1>
+                <form action="/apply/<%= job.id %>" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact</label>
+                    <input type="text" id="contact" name="contact" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="resume">Upload Resume(.pdf)</label>
+                    <input type="file" id="resume" name="resume" class="form-control" required accept=".pdf">
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary ">Submit Application</button>
+            </form>
+       </div>

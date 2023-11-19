@@ -1,0 +1,56 @@
+
+.div1{
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	background-color: lightgreen;
+	left:40%;
+	top:10%;
+	animation-name: reducesize, changeShape,rotate ;
+	animation-duration: 0.8s ,0.8s,0.8s;
+	animation-iteration-count: infinite,infinite,infinite;
+	animation-direction: alternate,alternate,alternate;
+}
+
+@keyframes changeShape{
+	0%{
+		border-radius: 0%;
+	}
+	25%{
+		border-radius: 12.50%;
+	}
+	50%{
+		border-radius: 25%;
+	}
+	100%{
+		border-radius: 50%;
+	}
+
+}
+@keyframes rotate{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+@keyframes reducesize{
+	from{
+		height: 200px;
+		width: 200px;
+	}
+	to{
+		height: 100px;
+		width: 100px;
+	}
+}
+.div2{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 15%;
+	top: 20%;
+	background-color: lightpink;
+	
+}

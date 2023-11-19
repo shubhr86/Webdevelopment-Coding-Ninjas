@@ -1,0 +1,18 @@
+#sample-para{
+	font-size: 30px;
+	font-weight: bold;
+	word-spacing: 1px;
+}
+#link{
+	text-decoration: none;
+	line-height: 1.4px;
+	word-spacing: 1px;
+
+}
+#link:hover{
+	text-decoration: none;
+	line-height: 1.4px;
+	word-spacing: 1px;
+	color: red;
+	
+}

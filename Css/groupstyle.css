@@ -1,0 +1,20 @@
+/*Group h1 and p css styles*/
+
+h1{
+	font-family: cursive;
+	background: blue;
+}
+
+/* nesting css rule */
+
+li h3{
+	text-transform: uppercase;
+}
+
+#blog-title:hover{
+	color: orange;
+}
+#site-title:hover{
+	color: orange;
+	
+}

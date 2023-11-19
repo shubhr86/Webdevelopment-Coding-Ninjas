@@ -1,0 +1,48 @@
+#div1{
+	
+	width: 100%;
+	border: 2px solid black;
+	display: inline-block;
+}
+main{
+	width: 70%;
+	display: inline-block;
+}
+
+@media screen and (max-width:600px){
+	#div1{
+	width:100%;
+	display:block;
+	height: 70%;
+	}
+
+}
+@media screen and (max-width:600px){
+	.sidebar{
+		margin-top: 5%;
+		width: 70%;
+		display:block;
+		
+	}
+	main{
+		width: 100%;
+	}
+}
+
+
+/*side bar*/
+
+
+
+aside{
+	border-top: 4px solid black;
+	vertical-align: top;
+	width: 20%;
+	display: inline-block;
+	margin-left: 3%;
+
+}
+#div2{
+	display: block;
+	width: 70%;
+}

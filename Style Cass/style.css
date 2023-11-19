@@ -1,0 +1,33 @@
+#div1{
+	height: 20rem;
+/*	 200px;*/
+	width:30rem; 
+/*	200px;*/
+	background-color: rgba(0, 0, 255, 1.0);
+}
+/*   rgb(15, 50, 70);
+	hsl(0, 255, 0);
+ */
+
+#div2{
+	height: 50%;
+	width: 50%;
+	background-color: skyblue;
+	border-rig: 2px;
+	border-style: dashed;
+	border-color: yellow;
+	border-radius: 13px;
+}
+/* vh -- view height as per the browser */
+
+#logo{
+	width: 210px;
+}
+#heading{
+border-left: 14px solid red;
+	padding: 15px;
+	background-color: yellow;
+	width: 70%;
+	
+	
+}

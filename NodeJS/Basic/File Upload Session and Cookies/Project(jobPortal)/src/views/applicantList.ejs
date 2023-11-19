@@ -1,0 +1,30 @@
+<div class="container">
+
+<h1 class="text-center p-3 mb-2 bg-primary text-white">Applicants for <%= job.designation %> at <%= job.companyName %></h1>
+<table class="table ">
+  <thead>
+    <tr>
+      <th class="p-3 mb-2 bg-success text-white">Name</th>
+      <th class="p-3 mb-2 bg-success text-white">Email</th>
+      <th class="p-3 mb-2 bg-success text-white">Contact</th>
+      <th class="p-3 mb-2 bg-success text-white">Resume</th>
+    </tr>
+  </thead>
+  <tbody class="p-3 mb-2 bg-secondary text-white">
+    <% if (job && job.applicants) { %>
+      <% job.applicants.forEach((applicant) => { %>
+        <tr>
+          <td><%= applicant.name %></td>
+          <td><%= applicant.email %></td>
+          <td><%= applicant.contact %></td>
+          <td id="resumelink" class="p-3 mb-2 bg-danger text-dark"><a href="/resume/<%= applicant.resumePath %>" target="_blank">Resume</a></td>
+        </tr>
+      <% }); %>
+    <% } else { %>
+      <tr>
+        <td colspan="4">No applicants found.</td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>
+</div>

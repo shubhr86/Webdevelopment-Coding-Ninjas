@@ -1,0 +1,14 @@
+<div class="container p-5 gap-2 d-flex flex-wrap">
+  <% if (products.length === 0) { %>
+    <p class="text-danger h2">Opps ! No products matching with your search were found .</p>
+  <% } else { %>
+    <% products.forEach((product) => { %>
+      <div class="card" style="width: 18rem">
+        <img src="<%= product.image %>" class="card-img-top" alt="<%= product.name %>" />
+        <div class="card-body">
+          <p class="card-text"><%= product.name %></p>
+        </div>
+      </div>
+    <% }); %>
+  <% } %>
+</div>

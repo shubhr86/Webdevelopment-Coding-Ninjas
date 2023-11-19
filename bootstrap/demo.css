@@ -1,0 +1,28 @@
+.container{
+	width: 500px;
+	height: 300px;
+	border: 2px solid black;
+	color: red;
+	padding: 1rem;
+}
+.inner-div1{
+	margin: 15px 10px 10px 10px;
+	height: 250px;
+	width: 475px;
+	border: 2px solid black;
+	
+}
+.div1{
+	border: 2px solid black;
+	margin: 15px 10px 10px 10px;
+	height: 85px;
+    width: 450px;
+    
+}
+.div2{
+	border: 2px solid black;
+	margin: 15px 10px 10px 10px;
+	height: 85px;
+    width: 450px;
+    
+}

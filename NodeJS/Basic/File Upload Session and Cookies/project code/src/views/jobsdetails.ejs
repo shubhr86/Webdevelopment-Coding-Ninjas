@@ -1,0 +1,25 @@
+<div class="container">
+    <h1 class="text-center p-3 mb-2 bg-primary text-white">Job Details</h1>
+    <div class="card">
+    
+        <div class="card-body">
+            <div class="text-center"><img src="/images/jobsBanner.png" class="img-fluid" alt="Responsive image">
+            </div><br>
+            <p class="card-text">Company: <%= job.companyName %></p>
+            <p class="card-text">Post: <%= job.designation %></p>
+            <p class="card-text">Location: <%= job.location %></p>
+            <p class="card-text">Salary: <%= job.salary %></p>
+            <p class="card-text">Apply by: <%= job.applyBy %></p>
+            <p class="card-text">Skills Required: <%= job.skillsRequired %></p>
+            <p class="card-text">Openings: <%= job.openings %></p>
+                 <!-- Check if job has applicants before trying to access the length -->
+           <p class="card-text">Applicants: <%= job.applicants ? job.applicants.length : 0 %></p>
+
+            <a href="/apply/<%= job.id %>" class="btn btn-md btn-primary px-5 my-2">Apply Now</a>
+
+
+                 </div>
+          </div>
+ </div>
+
+

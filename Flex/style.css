@@ -1,0 +1,53 @@
+#container{
+	height: 500px;
+	width: 500px;
+	background-color: lightblue;
+	display: flex;
+
+	/*	Direction*/
+	/*flex-direction: row;
+
+		Wrap*/
+	flex-wrap: ;
+*/
+/*		/*justify-content: space-around;*/
+/*		justify-content:space-between;*/
+
+/*		flex-wrap:wrap-reverse;*/
+		
+/*	flex-direction: row;*/
+	
+
+	/*		respecting height and width*/
+/*		align-items: stretch;*/
+
+/*		 margin to baseline*/
+		align-items: baseline;
+		align-items: center;
+		justify-content:;
+
+}
+
+#container div{
+	height: 100px;
+	width: 100px;
+}
+#div1{
+	background-color: cyan;
+	/*	Apperning order*/
+	/* order: 1;*/
+/*	flex-grow: 1;*/
+	
+}
+#div2{
+	background-color: red;
+/*	flex-grow: 1;*/
+}
+#div3{
+	background-color: black;
+/*	flex-grow: 1;*/
+}
+#div4{
+	background-color: green;
+/*	flex-grow: 1;*/
+}

@@ -1,0 +1,2 @@
+{"level":"error","timestamp":"Mon Nov 06 2023 13:29:45 GMT+0530 (India Standard Time)","error message":"testing app level custom error handling middleware"}
+{"level":"error","timestamp":"Mon Nov 06 2023 13:30:06 GMT+0530 (India Standard Time)","request URL":"/test-unhandled-error","error message":"Oops! Something went wrong... Please try later."}

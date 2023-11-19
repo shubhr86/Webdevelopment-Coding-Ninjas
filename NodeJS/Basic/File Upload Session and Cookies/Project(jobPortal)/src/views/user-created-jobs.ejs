@@ -1,0 +1,28 @@
+<!-- user-created-jobs.ejs -->
+<div class="container">
+  <h1 class="text-center p-3 mb-2 bg-primary text-white">Your Job Listings</h1>
+  <div class="row">
+      <% for (let job of jobs) { %>
+          <div class="col-md-4">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title"><%= job.companyName %></h5>
+                      <p class="card-text"><%= job.category %></p>
+                      <p class="card-text"><%= job.designation %></p>
+                      <p class="card-text"><%= job.location %></p>
+                      <p class="card-text"><%= job.applyBy %></p>
+                      <p class="card-text"><%= job.skillsRequired %></p>
+                      <p class="card-text"><%= job.openings %></p>
+                      <p class="card-text"><%= job.posted %></p>
+                      <p class="card-text"><%= job.applicants %></p>
+
+              <a href="/jobs/<%= job.id %>/edit" class="btn btn-primary">Update Job</a>
+              <button data-job-id="<%= job.id %>" class="btn btn-danger delete-job">Delete Job</button>
+            </div>
+          </div>
+        </div>
+      <% }; %>
+  
+    </div>
+  </div>
+  

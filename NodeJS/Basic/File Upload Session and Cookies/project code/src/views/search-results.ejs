@@ -1,0 +1,13 @@
+<!-- search-results.ejs -->
+<div class="container">
+    <h1 class="text-center">Search Results</h1>
+    <p>Showing results for: <%= query %></p>
+    <ul>
+      <% results.forEach((job) => { %>
+        <li>
+          <a href="/jobdetails/<%= job.id %>"><%= job.companyName %>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+  

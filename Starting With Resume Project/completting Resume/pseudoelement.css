@@ -1,0 +1,46 @@
+p::first-letter{
+	font-size: 2rem;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+/*First Line*/
+
+p::first-line{
+	font-size: 2rem;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+/*Before And After*/
+
+p::before{
+	content: 'Before';
+	font-size: 2rem;
+	font-weight: bold;
+	text-transform: capitalize;
+	background-color: lightblue;
+
+}
+p::after{
+	content: ' after';
+	font-size: 3rem;
+	font-weight: bold;
+	text-transform: capitalize;
+	background-color: lightblue;
+
+}
+ul{
+	list-style: none;
+}
+li::before{
+	content: '';
+	background-image: url(arrow.svg);
+	
+	display: inline-block;
+	margin-top: auto;
+	height: 20px;
+	width: 15px;
+	background-size: contain;
+	margin-inline: ;
+}

@@ -1,0 +1,53 @@
+.cube{
+	height: 200px;
+	width: 200px;
+	position: relative;
+	margin: 20%;
+	margin-left: 50%;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+	transform: rotateX(25deg) rotateY(-25deg);
+	animation: anime ease-in-out alternate infinite;
+}
+.face{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	transition: all 1s;
+	
+}
+.one{
+	background-color: skyblue;
+}
+.two{
+	background-color: orange;
+	transform: rotateY(90deg) translateZ(-100px) translateX(-100px);
+}
+.three{
+	background-color: violet;
+	transform: rotateY(-90deg) translateZ(-100px) translateX(100px);
+}
+.four{
+	background-color: green;
+	transform: rotateX(90deg) translateZ(100px) translateY(100px);
+}
+.five{
+	background-color: black;
+	transform: rotateX(90deg) translateZ(-100px) translateY(100px);
+}
+
+.six{
+	background-color: brown;
+	transform: translateZ(200px);
+}
+@keyframes anime{
+	from{
+		transform: rotateX(45deg);
+	}
+	to{
+		transform: rotateX(360deg) translateY(-100px);
+
+	}
+}

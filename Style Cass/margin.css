@@ -1,0 +1,22 @@
+html{
+	font-size: 30px;
+}
+#outer-div1{
+	height: 200px;
+	width: 200px;
+	background-color: #393a7b;
+	margin-bottom: 4px;
+	padding-top: 120px;
+	padding-left: 100px;
+}
+
+#inner-div1{
+	height: 50%;
+	width: 50%;
+	background-color: cyan;
+}
+#outer-div2{
+	height: 200px;
+	width: 200px;
+	background-color: orange;
+}

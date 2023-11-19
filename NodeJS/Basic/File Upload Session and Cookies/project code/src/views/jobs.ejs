@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="text-center p-3 mb-2 bg-primary text-white">Job Listings</h1>
+    <div class="row">
+        <% for (let job of jobs) { %>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= job.companyName %></h5>
+                        <p class="card-text"><%= job.category %></p>
+                        <p class="card-text"><%= job.designation %></p>
+                        <p class="card-text"><%= job.location %></p>
+                        <p class="card-text"><%= job.applyBy %></p>
+                        <p class="card-text"><%= job.skillsRequired %></p>
+                        <p class="card-text"><%= job.openings %></p>
+                        <p class="card-text"><%= job.posted %></p>
+                             <!-- Check if job has applicants before trying to access the length -->
+                        <p class="card-text"> <a href="/job/applicant/<%= job.id %>">Applicants:</a> <%= job.applicants ? job.applicants.length : 0 %></p>
+
+
+
+                        <a href="/jobdetails/<%= job.id %>" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>

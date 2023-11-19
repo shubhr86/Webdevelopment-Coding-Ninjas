@@ -1,0 +1,22 @@
+<!-- views/blogs.ejs -->
+<h1>Blog List</h1>
+<table class="table table-success table-hover table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% blogs.forEach((blog) => { %>
+      <tr>
+        <td><%= blog.title %></td>
+        <td><%= blog.description %></td>
+        <td>
+          <img src="<%= blog.img %>" alt="<%= blog.title %>" style="max-width: 100px; max-height: 100px;" />
+        </td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>

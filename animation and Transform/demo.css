@@ -1,0 +1,38 @@
+.div1{
+	height:100px;
+	width: 100px;
+	position: absolute;
+	background-color: lightblue;
+	border: 1px solid black;
+	margin-left: 10%;
+	margin-top:10%;
+/*	transform: rotate(45deg);*/
+	/*	Position of div tranlate*/
+/*	translate: 100px;*/
+	
+	transition: 1s ease-in-out;
+}
+.div1:hover{
+	transform: scale(1.5) translate(150px);
+}
+
+.div2{
+	height:100px;
+	width: 100px;
+	position: absolute;
+	background-color: lightpink;
+	border: 1px solid black;
+	margin-left: 20%;
+	margin-top:10%;
+	transition: 1s ease-in-out;
+}
+.div2:hover{
+	
+	transform: rotate(360deg);
+	translate: 150px -100px;
+	border-radius: 50%;
+	
+
+	
+
+}

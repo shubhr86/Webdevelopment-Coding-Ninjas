@@ -1,0 +1,100 @@
+/*TimeLine*/
+
+#experience{
+	height: 100%;
+	text-align: center;
+}
+.timeline{
+	position: relative;
+	width: 75%;
+	
+	border: 2px solid green;
+	background-color: lightblue;
+	text-align: center;
+	margin: auto;
+
+}
+.timeline-box{
+	position: relative;
+	margin: 5px;
+	width: 40%;
+
+	left: 5%;
+	border: 2px solid black;
+	min-height: 150px;
+	background-color: lightgrey;
+	text-align: center;
+}
+
+.timeline-box:nth-child(2n+1)::after{
+	text-align: center;
+	content: '';
+	position: absolute;
+	top:35%;
+	right: -13%;
+	border-radius: 50%;
+	width: 0.5rem;
+	height: 0.5rem;
+	background-color: red;
+	z-index: 1;
+}
+.timeline-box:nth-child(2n)::after{
+	text-align: center;
+	content: '';
+	position: absolute;
+	top:35%;
+	left: -9%;
+	border-radius: 50%;
+	width: 0.5rem;
+	height: 0.5rem;
+	background-color: red;
+	z-index: 1;
+}
+
+.timeline-box:nth-child(2n){
+	left:53%;
+}
+.timeline-divider{
+	position: absolute;
+	height: 75%;
+	width: 0;
+	border: 3px dashed #0096fa6b;
+	top: 10%;
+	left: 50%;
+}
+.timeline-travekker{
+	position: sticky;
+	top: 15%;
+	transform: rotate(90deg);
+}
+
+.div1 {
+       height: 550px;
+    width: 300px;
+    background-image: repeating-linear-gradient(45deg, #9e6df9, #f77656 25%, #5ffc87 50%);
+}
+
+/*Media Queries*/
+@media screen and (max-width:600px){
+	.timeline-divider{
+	left: 5%;
+
+   }
+    .timeline-box{
+    	left: 12% !important;
+    	width: 70%;
+    }
+/*   due to important no need of this code */
+   /*.timeline-box:nth-child(2n){
+	left:12%;
+	}*/
+.timeline-box:nth-child(2n+1)::after{
+
+	left: -13%;
+}	
+.timeline-box:nth-child(2n)::after{
+
+	left: -13%;
+}
+
+}

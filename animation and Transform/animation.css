@@ -1,0 +1,35 @@
+.div1{
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	background-color: lightgreen;
+	left:40%;
+	top:10%;
+	animation: changeShape 1s ease-in-out infinite alternate;
+}
+
+
+.div2{
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	background-color: lightgreen;
+	left:550%;
+	top:10%;
+	animation: bounce 1s ease-in-out 4 alternate;
+}
+@keyframes changeShape{
+	0%{
+		translate: 50px 50px;
+	}
+	25%{
+		translate: 50px -50px;
+	}
+	50%{
+		translate: 50px 50px;
+	}
+	100%{
+		translate: 50px -50px;
+	}
+	
+}
