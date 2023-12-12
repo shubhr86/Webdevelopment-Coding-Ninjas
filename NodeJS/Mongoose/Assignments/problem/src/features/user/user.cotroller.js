@@ -24,10 +24,14 @@ export const userRegisteration = async (req, res, next) => {
 
 export const userLogin = async (req, res, next) => {
   const resp = await userLoginRepo(req.body);
+  
   if (resp.success) {
-    const token = jwt.sign({ _id: resp.res._id }, process.env.JWT_SECRET, {
+    const { _id, name, email, mobile, age, type } = resp.res;
+
+    const token = jwt.sign({ _id, user: { name, email, mobile, age, type } }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
+
     res
       .cookie("jwtToken", token, { maxAge: 1 * 60 * 60 * 1000, httpOnly: true })
       .json({ success: true, msg: "user login successful", token });
@@ -35,6 +39,7 @@ export const userLogin = async (req, res, next) => {
     next(new customErrorHandler(resp.error.statusCode, resp.error.msg));
   }
 };
+
 
 export const updateUserPassword = async (req, res, next) => {
   const { newPassword } = req.body;

@@ -12,6 +12,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use("/codingninjas/api/user", userRouter);
 app.use("/codingninjas/api/job", jobRouter);
+app.use("/codingninjas/api/likes", jobRouter);
 
 app.use(appLevelErrorHandlerMiddleware);
 

@@ -31,8 +31,8 @@ export const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Validation error: Type is required'],
         enum: {
-            values: ['student', 'fresher', 'experienced'],
-            message: 'Validation error: Type must be one of [student, fresher, experienced]',
+            values: ['student', 'fresher', 'experienced','recruiter'],
+            message: 'Validation error: Type must be one of [student, fresher, experienced, recruiter]',
         },
     },
 });

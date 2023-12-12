@@ -1,7 +1,13 @@
 import mongoose from "mongoose";
 import { jobSchema } from "./job.schema.js";
+import { applicatonSchema } from "./application.Schema.js";
+import { likeSchema } from "./like.Schema.js";
 
 const JobModel = mongoose.model("Job", jobSchema);
+
+const ApplicationModel= mongoose.model('Application',applicatonSchema);
+
+const likeModel= mongoose.model('Like',likeSchema);
 
 export const applyJobRepo = async (job_id, user_id) => {
   try {
@@ -32,3 +38,17 @@ export const applyJobRepo = async (job_id, user_id) => {
     };
   }
 };
+export const postJobRepo= async (jobData)=>{
+  try{
+    const job= new JobModel(jobData);
+    const savedJob= await job.save();
+    return {success:true,job:savedJob};
+  }catch(err){
+    console.log(err);
+    return{
+      success:false,
+      err:{statusCode:400,msg:err.message},
+    }
+
+  }
+}
