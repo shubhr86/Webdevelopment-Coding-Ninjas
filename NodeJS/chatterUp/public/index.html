@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+
+    <!-- Fontawesome icons -->
+    <script
+      src="https://kit.fontawesome.com/a6cc128b0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--  -->
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!--  -->
+    <!-- Css -->
+    <link rel="stylesheet" href="styles.css" />
+    <!--  -->
+  </head>
+  <body>
+    <!-- Frontend UI of the Chat App -->
+    <div class="container bg-light p-4 pb-1 h-auto">
+      <div class="row">
+        <section class="col-md-9" id="msg-conatiner">
+          <!-- Header contains user name who is online and green dot and welcome message -->
+          <header
+            class="chat-header-input-color p-2 d-flex align-items-center"
+            id="user-details"
+          >
+            <span id="green dot" class="ms-2">
+              <i class="fa-solid fa-circle me-2" id="online"></i>
+            </span>
+          </header>
+          <!--Header ends here.  -->
+          <!-- Main part contains all the chats of users with timing and there dp. -->
+          <main id="user-chats" class="p-2 d-flex flex-column"></main>
+          <!--  -->
+          <form action="" class="msg-input p-2 chat-header-input-color">
+            <input
+              type="text"
+              class="input-box-bg-color p-2 border-0 me-2 w-75"
+              id="text-msg"
+              placeholder="Enter Your Message..."
+              required
+            /> 
+            <button type="button" class="btn btn-success" id="send-message">
+              Send
+            </button>
+          </form>
+
+         
+        </section>
+        <!--  -->
+        <!-- Connected Users -->
+        <div class="col-md-3" id="connected-users">
+          <button
+            type="button"
+            class="btn btn-primary mt-4 mb-1 w-100"
+            id="users-count-display"
+          >
+            Users connected 0
+            <!-- Placeholder for the initial user count -->
+          </button>
+
+          <div id="users-display"></div>
+        </div>
+      </div>
+    </div>
+
+    <audio id="incomingMessageSound" src="../assets/incoming_message_audio.mp3"></audio>
+
+    <!--  -->
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    >
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+  
+  <script src="../src/client/socket.js"></script>
+ 
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!-- no need to change the prewritten code.
+complete the script tag code. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task Management App</title>
+</head>
+
+<body>
+    <div id="task-form">
+        <!-- Create a form to add new tasks -->
+        <form id="create-task-form">
+            <input type="text" id="task-text" placeholder="Enter a new task" required>
+            <button id="create-task" type="submit">Add Task</button>
+        </form>
+    </div>
+
+    <div id="task-list">
+        <!-- Tasks will be displayed here -->
+    </div>
+
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io.connect('http://localhost:3000');
+
+        // -------------------write your code here.--------------------
+        // Function to add a new task to the task list
+        const addTaskToList = (task) => {
+            const taskList = document.getElementById('task-list');
+            const taskElement = document.createElement('div');
+            taskElement.innerHTML = `<div>${task.text} <button class="delete-btn" onclick="deleteTask('${task._id}')">Delete</button></div>`;
+            taskList.appendChild(taskElement);
+        };
+
+        // Function to delete a task from the task list
+        const deleteTask = (taskId) => {
+            // Emit "deleteTask" event to the server
+            socket.emit('deleteTask', taskId);
+        };
+
+        // Event handler for the create task form
+        document.getElementById('create-task-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const taskText = document.getElementById('task-text').value;
+            
+            // Emit "addTask" event to the server
+            socket.emit('addTask', taskText);
+
+            // Clear the input field
+            document.getElementById('task-text').value = '';
+        });
+
+        // Listen for incoming "initializeTasks" event
+        socket.on('initializeTasks', (tasks) => {
+            // Display all tasks on initialization
+            tasks.forEach(task => addTaskToList(task));
+        });
+
+        // Listen for incoming "addTask" event
+        socket.on('addTask', (newTask) => {
+            // Add the new task to the task list
+            addTaskToList(newTask);
+        });
+
+        // Listen for incoming "deleteTask" event
+        socket.on('deleteTask', (deletedTaskId) => {
+            // Remove the deleted task from the task list
+            const taskElement = document.querySelector(`[data-task-id="${deletedTaskId}"]`);
+            if (taskElement) {
+                taskElement.remove();
+            }
+        });
+    </script>
+</body>
+
+</html>
